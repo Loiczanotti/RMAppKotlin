@@ -1,23 +1,25 @@
 package com.ynov.kotlin.rickmorty.data.manager
 
 import com.ynov.kotlin.rickmorty.data.model.Character
-import io.reactivex.Single
+import com.ynov.kotlin.rickmorty.data.model.Episode
 
 class CacheManagerImpl: CacheManager{
 
-
-    private val listCharacter: MutableList<Character> = mutableListOf()
+    private val characterList: MutableList<Character> = mutableListOf()
+    private val episodeList: MutableList<Episode> = mutableListOf()
 
     override fun retrieveOneCharacterById(id: Int): Character? {
-        return listCharacter.first { it.id == id }
+        return characterList.first { it.id == id }
     }
 
     override fun setCharacterList(characterList: List<Character>) {
-        listCharacter.clear()
-        listCharacter.addAll(characterList)
+        this.characterList.clear()
+        this.characterList.addAll(characterList)
     }
 
-
-
+    override fun setEpisodeList(episodeList: List<Episode>) {
+        this.episodeList.clear()
+        this.episodeList.addAll(episodeList)
+    }
 
 }

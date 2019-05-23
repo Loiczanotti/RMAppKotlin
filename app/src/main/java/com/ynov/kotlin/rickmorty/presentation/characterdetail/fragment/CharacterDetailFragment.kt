@@ -1,7 +1,6 @@
 package com.ynov.kotlin.rickmorty.presentation.characterdetail.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.navigation.fragment.navArgs
 import com.squareup.picasso.Picasso
@@ -9,7 +8,7 @@ import com.ynov.kotlin.rickmorty.R
 import com.ynov.kotlin.rickmorty.presentation.base.fragment.BaseFragment
 import com.ynov.kotlin.rickmorty.presentation.characterdetail.viewmodel.CharacterDetailViewModel
 import com.ynov.kotlin.rickmorty.presentation.extensions.observeSafe
-import com.ynov.kotlin.rickmorty.presentation.viewdatawrapper.CharacterViewDataWrapper
+import com.ynov.kotlin.rickmorty.presentation.characterlist.viewdatawrapper.CharacterViewDataWrapper
 import kotlinx.android.synthetic.main.fragment_character_detail.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

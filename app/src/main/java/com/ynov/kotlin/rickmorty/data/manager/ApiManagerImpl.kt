@@ -1,6 +1,5 @@
 package com.ynov.kotlin.rickmorty.data.manager
 
-import io.reactivex.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -16,6 +15,7 @@ class ApiManagerImpl {
         .build()
         .create(ApiService::class.java)
 
-    fun retrieveCharacterList() = apiService.retrieveCharacterList()
+    fun retrieveAllCharacters() = apiService.retrieveAllCharacters()
     fun retrieveOneCharacter(id: Int) = apiService.retrieveOneCharacter(id)
+    fun retrieveAllEpisodes() = apiService.retrieveAllEpisodes()
 }
