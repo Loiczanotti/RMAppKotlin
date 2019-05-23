@@ -12,6 +12,9 @@ import com.ynov.kotlin.rickmorty.presentation.extensions.observeSafe
 import com.ynov.kotlin.rickmorty.presentation.viewdatawrapper.CharacterViewDataWrapper
 import kotlinx.android.synthetic.main.fragment_character_detail.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 class CharacterDetailFragment : BaseFragment() {
 
@@ -34,6 +37,22 @@ class CharacterDetailFragment : BaseFragment() {
     }
 
     private fun updateView(character: CharacterViewDataWrapper) {
-        Picasso.get().load(character.getImage()).into(rm_character_detail_image_view)
+        Picasso.get().load(character.getImage()).into(rm_fragment_character_detail_image_view)
+        rm_fragment_character_detail_name.text = character.getName()
+        rm_fragment_character_detail_status.text = character.getStatus()
+        rm_fragment_character_detail_species.text = character.getSpecies()
+        rm_fragment_character_detail_gender.text = character.getGender()
+        rm_fragment_character_detail_origin.text = context?.getString(R.string.fragment_detail_origin_text, character.getOrigin().name)
+        rm_fragment_character_detail_location.text = context?.getString(R.string.fragment_detail_location_text, character.getLocation().name)
+        rm_fragment_character_detail_created.text = context?.getString(R.string.fragment_detail_date_text, convertDateToFr(character.getCreated()))
+    }
+
+    private fun convertDateToFr(dateStr: String): String {
+        val inputFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        val format = "yyyy-MM-dd"
+        val parser = SimpleDateFormat(inputFormat, Locale.getDefault())
+        val formatter = SimpleDateFormat(format, Locale.getDefault())
+
+        return formatter.format(parser.parse(dateStr))
     }
 }
