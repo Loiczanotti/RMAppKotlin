@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Rick&amp;Morty</string>
-
     <string name="fragment_character_list_title_toolbar">Characters</string>
     <string name="fragment_episode_list_title_toolbar">Episodes</string>
+    <string name="fragment_detail_origin_text">Origin : %s</string>
+    <string name="fragment_detail_location_text">Location : %s</string>
+    <string name="fragment_detail_date_text">Créé le : %s</string>
 </resources>
