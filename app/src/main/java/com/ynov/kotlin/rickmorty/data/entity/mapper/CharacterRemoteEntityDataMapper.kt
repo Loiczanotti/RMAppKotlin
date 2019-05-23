@@ -8,7 +8,7 @@ class CharacterRemoteEntityDataMapper (
     private val originRemoteEntityDataMapper: OriginRemoteEntityDataMapper,
     private val locationRemoteEntityDataMapper: LocationRemoteEntityDataMapper
 ){
-    fun transformFromRemoteEntityList(characterRemoteEntity: CharacterRemoteEntity): Character {
+    fun transformFromRemoteEntity(characterRemoteEntity: CharacterRemoteEntity): Character {
         return Character(
             created = characterRemoteEntity.created,
             episodes = characterRemoteEntity.episodes,
@@ -27,7 +27,7 @@ class CharacterRemoteEntityDataMapper (
 
     fun transformFromRemoteEntityList(characterRemoteEntityList: CharacterListRemoteEntity): List<Character> {
         return characterRemoteEntityList.characterList.map {
-            transformFromRemoteEntityList(it)
+            transformFromRemoteEntity(it)
         }
     }
 }

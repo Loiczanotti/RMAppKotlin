@@ -1,4 +1,4 @@
-package com.ynov.kotlin.rickmorty.presentation.viewdatawrapper
+package com.ynov.kotlin.rickmorty.presentation.characterlist.viewdatawrapper
 
 import com.ynov.kotlin.rickmorty.data.model.Character
 

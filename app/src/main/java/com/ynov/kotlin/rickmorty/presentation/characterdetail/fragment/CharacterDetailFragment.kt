@@ -9,7 +9,7 @@ import com.ynov.kotlin.rickmorty.presentation.base.fragment.BaseFragment
 import com.ynov.kotlin.rickmorty.presentation.characterdetail.viewmodel.CharacterDetailViewModel
 import com.ynov.kotlin.rickmorty.presentation.extensions.convertDateToFr
 import com.ynov.kotlin.rickmorty.presentation.extensions.observeSafe
-import com.ynov.kotlin.rickmorty.presentation.viewdatawrapper.CharacterViewDataWrapper
+import com.ynov.kotlin.rickmorty.presentation.characterlist.viewdatawrapper.CharacterViewDataWrapper
 import kotlinx.android.synthetic.main.fragment_character_detail.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

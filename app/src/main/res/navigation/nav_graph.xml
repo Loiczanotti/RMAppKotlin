@@ -8,6 +8,11 @@
         <action android:id="@+id/action_characterListFragment_to_characterDetailActivity"
                 app:destination="@id/characterDetailActivity"/>
     </fragment>
+
+    <fragment android:id="@+id/episodeListFragment"
+              android:name="com.ynov.kotlin.rickmorty.presentation.episodeslist.fragment.EpisodeListFragment"
+              android:label="EpisodeListFragment"/>
+
     <activity android:id="@+id/characterDetailActivity"
               android:name="com.ynov.kotlin.rickmorty.presentation.characterdetail.activity.CharacterDetailActivity"
               android:label="CharacterDetailActivity">

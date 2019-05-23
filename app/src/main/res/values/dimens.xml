@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="rm_episode_list_episode_margin_bottom">8dp</dimen>
+    <dimen name="rm_episode_list_episode_margin_start">8dp</dimen>
+    <dimen name="rm_episode_list_episode_margin_end">8dp</dimen>
+    <dimen name="rm_episode_list_air_date_margin_end">8dp</dimen>
+    <dimen name="rm_episode_list_air_date_margin_start">8dp</dimen>
+    <dimen name="rm_episode_list_air_date_margin_bottom">8dp</dimen>
+    <dimen name="rm_episode_list_name_margin_top">8dp</dimen>
+    <dimen name="rm_episode_list_name_margin_start">8dp</dimen>
+    <dimen name="rm_episode_list_name_margin_end">8dp</dimen>
+    <dimen name="rm_episode_list_name_margin_bottom">8dp</dimen>
+
+    <dimen name="rm_character_list_image_view_height">70dp</dimen>
+    <dimen name="rm_character_list_image_view_width">70dp</dimen>
+    <dimen name="rm_character_list_image_view_margin_start">8dp</dimen>
+    <dimen name="rm_character_list_image_view_margin_top">8dp</dimen>
+    <dimen name="rm_character_list_image_view_margin_bottom">8dp</dimen>
+    <dimen name="rm_character_list_card_elevation">4dp</dimen>
+    <dimen name="rm_character_list_card_margin_start">8dp</dimen>
+    <dimen name="rm_character_list_card_margin_end">8dp</dimen>
+</resources>

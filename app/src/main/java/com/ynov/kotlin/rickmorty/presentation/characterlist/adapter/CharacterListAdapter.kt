@@ -5,9 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ynov.kotlin.rickmorty.R
-import com.ynov.kotlin.rickmorty.data.model.Character
 import com.ynov.kotlin.rickmorty.presentation.characterlist.adapter.viewholder.CharacterViewHolder
-import com.ynov.kotlin.rickmorty.presentation.viewdatawrapper.CharacterViewDataWrapper
+import com.ynov.kotlin.rickmorty.presentation.characterlist.viewdatawrapper.CharacterViewDataWrapper
 
 class CharacterListAdapter(val context: Context): RecyclerView.Adapter<CharacterViewHolder>() {
 
