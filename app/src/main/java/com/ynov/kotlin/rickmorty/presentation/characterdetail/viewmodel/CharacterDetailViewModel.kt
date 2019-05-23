@@ -13,6 +13,7 @@ class CharacterDetailViewModel(private val dataRepository: DataRepository) : Vie
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
     val character: MutableLiveData<CharacterViewDataWrapper> = MutableLiveData()
+    val errorLiveData: MutableLiveData<Throwable> = MutableLiveData()
 
 
     override fun onCleared() {
@@ -31,7 +32,7 @@ class CharacterDetailViewModel(private val dataRepository: DataRepository) : Vie
                     )
                 },
                 onError = {
-                    throw it
+                    errorLiveData.postValue(it)
                 }
             ))
     }

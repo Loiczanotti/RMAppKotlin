@@ -22,4 +22,8 @@ class CacheManagerImpl: CacheManager{
         this.episodeList.addAll(episodeList)
     }
 
+    override fun retrieveAllCharacters(): List<Character> = characterList
+
+    override fun retrieveAllEpisodes(): List<Episode> = episodeList
+
 }

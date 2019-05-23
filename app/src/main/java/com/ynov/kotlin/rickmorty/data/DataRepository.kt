@@ -17,12 +17,19 @@ class DataRepository(
 
     fun retrieveAllCharacterList(): Single<List<Character>> {
         return Single.defer {
-            apiManagerImpl.retrieveAllCharacters()
-                .map {
-                    characterRemoteEntityDataMapper.transformFromRemoteEntityList(it)
-                }.doAfterSuccess {
-                    cacheManager.setCharacterList(it)
+            if (cacheManager.retrieveAllCharacters().isNotEmpty()) {
+                Single.just(cacheManager.retrieveAllCharacters())
+            } else {
+                run {
+                    apiManagerImpl.retrieveAllCharacters()
+                        .map {
+                            characterRemoteEntityDataMapper.transformFromRemoteEntityList(it)
+                        }.doAfterSuccess {
+                            cacheManager.setCharacterList(it)
+                        }
                 }
+            }
+
         }
     }
 
@@ -42,16 +49,20 @@ class DataRepository(
 
     fun retrieveAllEpisodes(): Single<List<Episode>> {
         return Single.defer {
-            apiManagerImpl.retrieveAllEpisodes()
-                .map {
-                    episodeRemoteEntityDataMapper.transformFromRemoteEntityList(it)
-                }.doAfterSuccess {
-                    cacheManager.setEpisodeList(it)
+            if (cacheManager.retrieveAllEpisodes().isNotEmpty()) {
+                Single.just(cacheManager.retrieveAllEpisodes())
+            } else {
+                run {
+                    apiManagerImpl.retrieveAllEpisodes()
+                        .map {
+                            episodeRemoteEntityDataMapper.transformFromRemoteEntityList(it)
+                        }.doAfterSuccess {
+                            cacheManager.setEpisodeList(it)
+                        }
                 }
+            }
         }
     }
-
-
 
 
 }

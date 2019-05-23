@@ -8,4 +8,6 @@ interface CacheManager {
     fun retrieveOneCharacterById(id: Int): Character?
     fun setCharacterList(characterList: List<Character>)
     fun setEpisodeList(episodeList: List<Episode>)
+    fun retrieveAllCharacters(): List<Character>
+    fun retrieveAllEpisodes(): List<Episode>
 }
