@@ -13,6 +13,7 @@ class EpisodeListViewModel(private val dataRepository: DataRepository) : ViewMod
 
     val compositeDisposable: CompositeDisposable = CompositeDisposable()
     val episodeList: MutableLiveData<List<EpisodeViewDataWrapper>> = MutableLiveData()
+    val errorLiveData: MutableLiveData<Throwable> = MutableLiveData()
 
     init {
         retrieveAllEpisodes()
@@ -28,14 +29,10 @@ class EpisodeListViewModel(private val dataRepository: DataRepository) : ViewMod
             .observeOn(mainThread())
             .subscribeBy(
                 onSuccess = { episodeList ->
-                    this.episodeList.postValue(episodeList.map {
-                        EpisodeViewDataWrapper(
-                            it
-                        )
-                    })
+                    this.episodeList.postValue(episodeList.map { EpisodeViewDataWrapper(it) })
                 },
                 onError = {
-                    throw it
+                    errorLiveData.postValue(it)
                 }
             ))
     }

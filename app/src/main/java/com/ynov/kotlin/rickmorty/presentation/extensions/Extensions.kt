@@ -1,5 +1,6 @@
 package com.ynov.kotlin.rickmorty.presentation.extensions
 
+import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -21,4 +22,12 @@ fun convertDateToFr(dateStr: String): String {
     val formatter = SimpleDateFormat(format, Locale.getDefault())
 
     return formatter.format(parser.parse(dateStr))
+}
+
+fun View.show() {
+    visibility = View.VISIBLE
+}
+
+fun View.hide() {
+    visibility = View.GONE
 }

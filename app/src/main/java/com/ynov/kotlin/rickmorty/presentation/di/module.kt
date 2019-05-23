@@ -10,6 +10,8 @@ import com.ynov.kotlin.rickmorty.data.manager.CacheManagerImpl
 import com.ynov.kotlin.rickmorty.presentation.characterdetail.viewmodel.CharacterDetailViewModel
 import com.ynov.kotlin.rickmorty.presentation.characterlist.adapter.CharacterListAdapter
 import com.ynov.kotlin.rickmorty.presentation.characterlist.viewmodel.CharacterListViewModel
+import com.ynov.kotlin.rickmorty.presentation.component.SnackBarComponent
+import com.ynov.kotlin.rickmorty.presentation.component.SnackBarComponentImpl
 import com.ynov.kotlin.rickmorty.presentation.episodeslist.adapter.EpisodeListAdapter
 import com.ynov.kotlin.rickmorty.presentation.episodeslist.viewmodel.EpisodeListViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -29,6 +31,7 @@ val myModule = module {
     viewModel { EpisodeListViewModel(get()) }
     factory { CharacterListAdapter(get()) }
     factory { EpisodeListAdapter(get()) }
+    factory { SnackBarComponentImpl() as SnackBarComponent}
 
 
 }

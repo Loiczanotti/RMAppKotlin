@@ -15,4 +15,9 @@ class CharacterDetailActivity: AppCompatActivity() {
                 .setGraph(R.navigation.character_detail_nav_graph, intent.extras)
         }
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }

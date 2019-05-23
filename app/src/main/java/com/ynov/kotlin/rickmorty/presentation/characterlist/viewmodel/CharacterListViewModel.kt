@@ -14,6 +14,7 @@ class CharacterListViewModel(private val dataRepository: DataRepository) : ViewM
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
     val characterList: MutableLiveData<List<CharacterViewDataWrapper>> = MutableLiveData()
+    val errorLiveData: MutableLiveData<Throwable> = MutableLiveData()
 
     init {
         retrieveAllCharacter()
@@ -29,14 +30,10 @@ class CharacterListViewModel(private val dataRepository: DataRepository) : ViewM
             .observeOn(mainThread())
             .subscribeBy(
                 onSuccess = { characterList ->
-                    this.characterList.postValue(characterList.map {
-                        CharacterViewDataWrapper(
-                            it
-                        )
-                    } )
+                    this.characterList.postValue(characterList.map { CharacterViewDataWrapper(it) })
                 },
                 onError = {
-                    throw it
+                    errorLiveData.postValue(it)
                 }
             ))
     }
