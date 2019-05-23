@@ -9,4 +9,7 @@ class CharacterViewDataWrapper(val character: Character) {
     fun getSpecies(): String = character.species
     fun getGender(): String = character.gender
     fun getImage(): String = character.image
+    fun getOriginName(): String = character.origin.name
+    fun getLocationName(): String = character.location.name
+    fun getCreated(): String = character.created
 }
