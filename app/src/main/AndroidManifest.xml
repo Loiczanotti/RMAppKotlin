@@ -11,13 +11,14 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".presentation.ui.activity.MainActivity">
+        <activity android:name="com.ynov.kotlin.rickmorty.presentation.characterlist.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".presentation.characterdetail.activity.CharacterDetailActivity"/>
     </application>
 
 </manifest>

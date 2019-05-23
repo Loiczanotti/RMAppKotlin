@@ -17,4 +17,5 @@ class ApiManagerImpl {
         .create(ApiService::class.java)
 
     fun retrieveCharacterList() = apiService.retrieveCharacterList()
+    fun retrieveOneCharacter(id: Int) = apiService.retrieveOneCharacter(id)
 }

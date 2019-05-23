@@ -1,4 +1,4 @@
-package com.ynov.kotlin.rickmorty.presentation.ui.fragment
+package com.ynov.kotlin.rickmorty.presentation.base.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
