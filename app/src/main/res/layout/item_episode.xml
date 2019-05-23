@@ -5,12 +5,12 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <androidx.cardview.widget.CardView
-            android:id="@+id/rm_character_list_card"
+            android:id="@+id/rm_episode_list_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="@dimen/rm_character_list_card_elevation"
-            android:layout_marginStart="@dimen/rm_character_list_card_margin_start"
-            android:layout_marginEnd="@dimen/rm_character_list_card_margin_end"
+            app:cardElevation="@dimen/rm_episode_list_card_elevation"
+            android:layout_marginStart="@dimen/rm_episode_list_card_margin_start"
+            android:layout_marginEnd="@dimen/rm_episode_list_card_margin_end"
             app:cardUseCompatPadding="true"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -21,12 +21,12 @@
                 android:layout_height="wrap_content">
 
             <ImageView
-                    android:id="@+id/rm_character_list_image_view"
-                    android:layout_width="@dimen/rm_character_list_image_view_width"
-                    android:layout_height="@dimen/rm_character_list_image_view_height"
-                    android:layout_marginStart="@dimen/rm_character_list_image_view_margin_start"
-                    android:layout_marginTop="@dimen/rm_character_list_image_view_margin_top"
-                    android:layout_marginBottom="@dimen/rm_character_list_image_view_margin_bottom"
+                    android:id="@+id/rm_episode_list_image_view"
+                    android:layout_width="@dimen/rm_episode_list_image_view_width"
+                    android:layout_height="@dimen/rm_episode_list_image_view_height"
+                    android:layout_marginStart="@dimen/rm_episode_list_image_view_margin_start"
+                    android:layout_marginTop="@dimen/rm_episode_list_image_view_margin_top"
+                    android:layout_marginBottom="@dimen/rm_episode_list_image_view_margin_bottom"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_episodes"
                     android:tint="@color/colorPrimary"
@@ -49,7 +49,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/rm_episode_list_air_date"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/rm_character_list_image_view"
+                    app:layout_constraintStart_toEndOf="@id/rm_episode_list_image_view"
             />
             <TextView
                     android:id="@+id/rm_episode_list_air_date"
@@ -64,7 +64,7 @@
                     app:layout_constraintTop_toBottomOf="@id/rm_episode_list_name"
                     app:layout_constraintBottom_toTopOf="@id/rm_episode_list_episode"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/rm_character_list_image_view"
+                    app:layout_constraintStart_toEndOf="@id/rm_episode_list_image_view"
             />
 
             <TextView
@@ -80,7 +80,7 @@
                     app:layout_constraintTop_toBottomOf="@id/rm_episode_list_air_date"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/rm_character_list_image_view"
+                    app:layout_constraintStart_toEndOf="@id/rm_episode_list_image_view"
             />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
