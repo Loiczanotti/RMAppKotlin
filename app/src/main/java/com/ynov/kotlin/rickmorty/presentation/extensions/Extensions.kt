@@ -15,6 +15,8 @@ fun <T> LiveData<T>.observeSafe(owner: LifecycleOwner, observer: (T) -> Unit) {
     })
 }
 
+// TODO c'est pas une extension ça, c'est juste une fonction
+//  il aurait fallu plutôt donner fun String.convertDateToFr(): String
 fun convertDateToFr(dateStr: String): String {
     val inputFormat = "yyyy-MM-dd'T'HH:mm:ss"
     val format = "yyyy-MM-dd"

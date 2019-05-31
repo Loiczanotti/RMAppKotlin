@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.item_character.view.*
 
 class CharacterViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
+    // TODO ils peuvent tous être private ces champs
     val name = view.rm_character_list_name
     val image = view.rm_character_list_image_view
     val status = view.rm_character_list_status

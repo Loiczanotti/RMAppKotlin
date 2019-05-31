@@ -39,6 +39,7 @@ class EpisodeListFragment : BaseFragment() {
             rm_fragment_episode_list_progress.hide()
             rm_episode_list_swipe.isRefreshing = false
             it.message?.let { message ->
+                // TODO il vaut mieux utiliser requireContext() plutôt que de forcer le context nullable avec un !!
                 snackBarComponent.showSnackBarError(view, message, context!!)
             }
 

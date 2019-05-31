@@ -11,6 +11,7 @@ import io.reactivex.schedulers.Schedulers
 
 class EpisodeListViewModel(private val dataRepository: DataRepository) : ViewModel() {
 
+    //TODO il peut être private celui-là
     val compositeDisposable: CompositeDisposable = CompositeDisposable()
     val episodeList: MutableLiveData<List<EpisodeViewDataWrapper>> = MutableLiveData()
     val errorLiveData: MutableLiveData<Throwable> = MutableLiveData()

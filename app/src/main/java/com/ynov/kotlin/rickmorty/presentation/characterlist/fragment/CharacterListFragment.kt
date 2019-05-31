@@ -53,6 +53,7 @@ class CharacterListFragment : BaseFragment() {
 
     private fun setUpRecyclerView() {
         val onItemClickListener: (Int) -> Unit = {
+            // TODO du coup le but du MainNavigator c'est de faire ça dedans et pas ici dans le fragment
             val direction = CharacterListFragmentDirections.actionCharacterListFragmentToCharacterDetailActivity(it)
             findNavController().navigate(direction)
         }
